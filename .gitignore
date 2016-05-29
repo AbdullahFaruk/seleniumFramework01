@@ -27,3 +27,11 @@ target/surefire/
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
+
+/target
+/.project
+/.settings
+/.classpath
+/.idea
+/*.iml
+
