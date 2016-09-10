@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class SeleniumDataProvider extends PageUtils {
 
-        @Test(invocationCount=2)
+        @Test(invocationCount=1)
 
         public void secondTest() throws Exception {
 
@@ -49,19 +49,19 @@ public class SeleniumDataProvider extends PageUtils {
             Thread.sleep(3000);
 
 
-            if (waitForElementDisplayed(By.xpath(".//*[@id='pdp-content-area']/div/div/div/div/article/section[2]/section[3]/div/button")) != null) {
+            if (waitForElementDisplayed(By.cssSelector("button[class='hbc-button hbc-button--full hbc-button--primary product__add-to-bag-button']")) != null) {
                 System.out.println("Element is Present");
             } else {
                 System.out.println("Element is NOT Present");
             }
 
-            if (driver.findElements(By.xpath(".//*[@id='pdp-content-area']/div/div/div/div/article/section[2]/section[3]/div/button")).size() != 0) {
+            if (driver.findElements(By.cssSelector("button[class='hbc-button hbc-button--full hbc-button--primary product__add-to-bag-button']")).size() != 0) {
                 System.out.println("Element is Present");
             } else {
                 System.out.println("Element is Absent");
             }
 
-            WebElement addToBagButton = waitForElementDisplayed(By.xpath(".//*[@id='pdp-content-area']/div/div/div/div/article/section[2]/section[3]/div/button"));
+            WebElement addToBagButton = waitForElementDisplayed(By.cssSelector("button[class='hbc-button hbc-button--full hbc-button--primary product__add-to-bag-button']"));
             if (addToBagButton.isDisplayed()) {
                 System.out.println("Test Case Passed");
             } else {
