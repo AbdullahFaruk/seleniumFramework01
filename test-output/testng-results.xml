@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Search By Text" duration-ms="304835" started-at="2016-08-24T02:34:58Z" finished-at="2016-08-24T02:40:03Z">
+    <groups>
+    </groups>
+    <test name="Regression suite" duration-ms="304835" started-at="2016-08-24T02:34:58Z" finished-at="2016-08-24T02:40:03Z">
+      <class name="com.paxovision.conceptual.SeleniumDataProvider">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.paxovision.conceptual.SeleniumDataProvider@67b6d4ae]" name="setUp" is-config="true" duration-ms="31442" started-at="2016-08-23T22:34:58Z" finished-at="2016-08-23T22:35:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="search_addToItem_Test()[pri:0, instance:com.paxovision.conceptual.SeleniumDataProvider@67b6d4ae]" name="search_addToItem_Test" duration-ms="90375" started-at="2016-08-23T22:35:30Z" finished-at="2016-08-23T22:37:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search_addToItem_Test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.paxovision.conceptual.SeleniumDataProvider@67b6d4ae]" name="tearDown" is-config="true" duration-ms="6138" started-at="2016-08-23T22:37:00Z" finished-at="2016-08-23T22:37:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.paxovision.conceptual.SeleniumDataProvider@67b6d4ae]" name="setUp" is-config="true" duration-ms="31577" started-at="2016-08-23T22:37:06Z" finished-at="2016-08-23T22:37:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="search_addToItem_Test()[pri:0, instance:com.paxovision.conceptual.SeleniumDataProvider@67b6d4ae]" name="search_addToItem_Test" duration-ms="144794" started-at="2016-08-23T22:37:38Z" finished-at="2016-08-23T22:40:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search_addToItem_Test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.paxovision.conceptual.SeleniumDataProvider@67b6d4ae]" name="tearDown" is-config="true" duration-ms="487" started-at="2016-08-23T22:40:03Z" finished-at="2016-08-23T22:40:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.paxovision.conceptual.SeleniumDataProvider -->
+    </test> <!-- Regression suite -->
+  </suite> <!-- Search By Text -->
+</testng-results>
