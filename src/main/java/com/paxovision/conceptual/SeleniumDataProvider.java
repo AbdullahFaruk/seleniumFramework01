@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 
 /**
@@ -16,12 +17,15 @@ public class SeleniumDataProvider extends PageUtils {
         @Test(invocationCount=1)
 
         public void secondTest() throws Exception {
+            Logger log = Logger.getLogger("LogApplication");
 
+            log.info("Saks Fifth Avenue Website is Loaded");
             waitForElementDisplayed(By.cssSelector("iframe[src*='email_popup']"));
             driver.switchTo().frame(waitForElementDisplayed(By.cssSelector("iframe[src*='email_popup']")));
             waitForElementDisplayed(By.cssSelector("div[id='close-button']")).click();
             driver.switchTo().defaultContent();
 
+            log.info("User Enters info in Search");
             WebElement searchTextBox = waitForElementDisplayed(By.name("SearchString"));
             searchTextBox.clear();
             highlightElement(searchTextBox);

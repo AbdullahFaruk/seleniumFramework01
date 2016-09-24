@@ -13,6 +13,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 /**
  * Created by shawon on 8/13/16.
@@ -27,12 +28,14 @@ public class PageUtils {
     @BeforeMethod
     public void setUp(){
 
+        Logger log = Logger.getLogger("LogApplication");
+
         /*System.setProperty(
                 "webdriver.chrome.driver",
                     "/usr/local/bin/chromedriver");
-
-
         driver = new ChromeDriver();*/
+
+        log.info("Strarting the WebApplication in FireFox Browser");
         driver = new FirefoxDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
