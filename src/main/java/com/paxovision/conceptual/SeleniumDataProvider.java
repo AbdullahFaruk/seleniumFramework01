@@ -1,6 +1,9 @@
 package com.paxovision.conceptual;
 
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,7 +19,7 @@ public class SeleniumDataProvider extends PageUtils {
 
         @Test(invocationCount=1)
 
-        public void secondTest() throws Exception {
+        public void searchAndSelect() throws Exception {
             Logger log = Logger.getLogger("LogApplication");
 
             log.info("Saks Fifth Avenue Website is Loaded");
@@ -88,6 +91,40 @@ public class SeleniumDataProvider extends PageUtils {
         }
 
 
+    @Test
+
+    public void quickLookTest() throws Exception{
+
+        Logger log = Logger.getLogger("LogApplication");
+        log.info("User Enters info in Search");
+        WebElement searchTextBox = waitForElementDisplayed(By.name("SearchString"));
+        searchTextBox.clear();
+        highlightElement(searchTextBox);
+        searchTextBox.sendKeys("Shirts");
+        highlightElement(searchTextBox);
+        WebElement submitSearch = waitForElementDisplayed(By.name("submit-search"));
+        highlightElement(submitSearch);
+        submitSearch.submit();
+        Thread.sleep(1000);
+
+       if (waitForElementDisplayed(By.cssSelector("div[class='sfa-pa-quicklook-button']")).isDisplayed()){
+           log.info("QuickLook is Present");
+           System.out.println("PASSED");
+           waitForElementDisplayed(By.cssSelector("div[class='sfa-pa-quicklook-button']")).click();
+       }else{
+           System.out.println("Test FAILED");
+       }
+
+
+    }
+
+
+    @Test
+    public void reportTest() throws Exception{
+
+
+
+    }
 
 
 
